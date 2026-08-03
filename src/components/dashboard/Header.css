@@ -1,0 +1,44 @@
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: #EDEDED;
+    border-bottom: 1px solid #ddd;
+    gap: 15px;
+}
+.header .logo{
+    display:flex;
+    align-items:center;
+    gap: 30px;
+    width: 24px;
+    height: 24px;
+    background-color: #999999;
+}
+.logo > h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #595959;
+}
+.header > h1 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #595959;
+    white-space: nowrap; 
+
+}
+@media(max-width: 992px) {
+    .header{
+        max-width: 990px;
+    }
+}
+@media (max-width:768px){
+    .header{
+        padding:0 15px;
+    }
+
+    .header>h1{
+        font-size: .65rem;
+    }
+}

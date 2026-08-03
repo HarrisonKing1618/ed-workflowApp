@@ -1,0 +1,9 @@
+import "./AuthLayout.css"
+
+export default function AuthLayout({children}) {
+    return (
+        <main className="auth-layout">
+            {children}
+        </main>
+    )
+}

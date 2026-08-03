@@ -1,0 +1,16 @@
+.button {
+    border-radius: 6px;
+    border: none;
+    width: 22rem;
+    height: 2.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #262626;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
