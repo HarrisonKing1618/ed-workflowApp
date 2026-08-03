@@ -1,4 +1,4 @@
-import LoginForm from "../../components/auth/loginForm";
+import LoginForm from "../../components/auth/LoginForm";
 import Logo from "../../components/common/Logo";
 import AuthLayout from "../../components/Layout/AuthLayout";
 import { Link } from "react-router-dom";
