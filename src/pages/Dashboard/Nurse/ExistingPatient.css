@@ -1,0 +1,178 @@
+/* PAGE */
+
+.existing-patient-page{
+    width:100%;
+    min-height:100%;
+    background:#fff;
+}
+
+.existing-page-header{
+    padding:20px 28px;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.existing-page-header h1{
+    margin:0;
+    font-size:20px;
+    font-weight:600;
+    color:#172033;
+}
+
+/* CONTENT */
+
+.existing-content{
+    padding:20px 28px;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+/* SEARCH CARD */
+
+.search-card{
+    background:#fff;
+    border:1px solid #DFE5EC;
+    border-radius:10px;
+    padding:18px;
+}
+
+.search-card-header{
+    margin-bottom:18px;
+}
+
+.search-card-header h3{
+    margin:0;
+    font-size:15px;
+    color:#172033;
+}
+
+.search-card-header p{
+    margin-top:4px;
+    font-size:12px;
+    color:#64748B;
+}
+
+.search-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.search-action{
+    margin-top:20px;
+}
+
+/* RESULTS */
+
+.results-section{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.results-header h3{
+    margin:0;
+    font-size:15px;
+    color:#172033;
+}
+
+/* TABLE */
+
+.results-table{
+    border:1px solid #DFE5EC;
+    border-radius:10px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.table-head,
+.table-row{
+    display:grid;
+    grid-template-columns:
+        2fr
+        1.2fr
+        1.8fr
+        1fr
+        100px;
+
+    align-items:center;
+}
+
+.table-head{
+    background:#F8FAFC;
+    color:#64748B;
+    font-size:11px;
+    font-weight:600;
+    padding:14px 16px;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.table-row{
+    padding:16px;
+    font-size:13px;
+    color:#172033;
+    border-bottom:1px solid #EDF2F7;
+}
+
+.table-row:last-child{
+    border-bottom:none;
+}
+
+.patient-name strong{
+    font-weight:600;
+}
+
+.visit-info{
+    color:#64748B;
+    font-size:12px;
+}
+
+.mrn{
+    font-size:12px;
+    color:#475467;
+}
+
+/* BUTTON */
+
+.select-button{
+    border:none;
+    background:none;
+    color:#1976C5;
+    font-weight:600;
+    cursor:pointer;
+    text-align:left;
+    font-size:13px;
+}
+
+.select-button:hover{
+    color:#0F5EA6;
+}
+
+/* EMPTY */
+
+.empty-results{
+    padding:28px;
+    text-align:center;
+    color:#94A3B8;
+    font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .search-grid{
+        grid-template-columns:1fr;
+    }
+    .table-head{
+        display:none;
+    }
+    .table-row{
+        grid-template-columns:1fr;
+        gap:10px;
+        padding:18px;
+    }
+    .select-button{
+        padding-top:8px;
+    }
+}

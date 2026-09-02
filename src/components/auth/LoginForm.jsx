@@ -1,107 +1,219 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { users } from "../../data/data";
-import { sidebarMenu } from "../../data/sidebarData";
+// import { loginUser } from "../../services/api";
+import { users } from "../../data/data.js";
+import { sidebarMenu } from "../../data/sidebarData.js";
 import Input from "../common/Input";
 import Button from "../common/Button";
+import dashboardRoutes from "../../data/dashboardRoutes.js";
 import "./LoginForm.css"
 
 
 
+
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] =useState({
-    email: "",
+    identifier: "",
     password: ""
   })
   const [isLoading, setIsLoading]= useState(false)
   const navigate = useNavigate()
 
+  // async function handleSubmit(e) {
+  //   e.preventDefault()
+  //   const newErrors = {}
+
+
+  //     // Email validation
+  //     if (!identifier.trim()) {
+  //     newErrors.identifier = "Email or Staff Id is required"
+  //   } 
+
+  //   // Password validation
+  //   if (!password.trim()) {
+  //     newErrors.password = "Password is required"
+  //   }
+
+  //   if (Object.keys(newErrors).length > 0) {
+  //     setErrors(newErrors)
+  //     return
+  //   }
+
+  //   // const user = users.find((user) => user.email === email && user.password === password)
+
+  //   const user = users.find(
+  //       (user) =>
+  //           (user.email === identifier.trim() ||
+  //            user.staffId === identifier.trim()) &&
+  //           user.password === password
+  //   )
+
+  //   if (!user) {
+  //     newErrors.password = "Invalid email or password"
+  //   } 
+
+
+  //   // display errors to the page
+
+    
+
+  //   setErrors({
+  //     identifier: "",
+  //     password: ""
+  //   })
+  //   setIsLoading(true)
+
+
+  //   try {
+  //     // const data = await loginUser(identifier, password)
+
+
+  //     console.log("Backend", data)
+
+  //     // On succesful login
+  //     // console.log("User:", data.user);
+  //     // console.log("Token:", data.token);
+  //     // console.log("Redirect:", data.redirectUrl);
+
+      
+  //     localStorage.setItem("user", JSON.stringify(data.user));
+  //     localStorage.setItem("token", data.token)
+
+  //     // role based dashboard
+  //     const role = user.role
+  //     const dashboardPath = dashboardRoutes[role]
+
+  //     if (!dashboardPath) {
+  //       throw new Error("Invalid user role")
+  //     }
+  //     navigate(dashboardPath);
+
+  //     // role based Dashboard test frontend
+      
+  //     const menu = sidebarMenu[user.role]
+  //     const path = menu[0].path
+  //     await new Promise((resolve) => setTimeout(resolve, 2000))
+  //     }
+
+  //    catch (error) {
+  //     console.error("Login error:", error)
+  //     setErrors({
+  //       identifier: "",
+  //       password: error.message || "Unable to connect to server"
+  //     })
+  //   } finally {
+  //     setIsLoading(false)
+  //   }
+      
+  // }
   async function handleSubmit(e) {
-    e.preventDefault()
-    const newErrors = {}
+    e.preventDefault();
 
+    const newErrors = {};
 
-      // Email validation
-      if (!email.trim()) {
-      newErrors.email = "Email is required"
-    } else {
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-      if (!emailRegex.test(email)) {
-        newErrors.email = "Please enter a valid email address"
-        }
+    // Validate identifier
+    if (!identifier.trim()) {
+        newErrors.identifier = "Email or Staff ID is required";
     }
 
-    // Password validation
+    // Validate password
     if (!password.trim()) {
-      newErrors.password = "Password is required"
+        newErrors.password = "Password is required";
     }
 
-    const user = users.find((user) => user.email === email && user.password === password)
-    if (!user) {
-      newErrors.password = "Invalid email or password"
-    } 
+    // Stop if fields are empty
     if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors)
-      return
+        setErrors(newErrors);
+        return;
     }
 
+    // Find user by email OR staff ID
+    const user = users.find(
+        (user) =>
+            (
+                user.email === identifier.trim() ||
+                user.staffId === identifier.trim()
+            ) &&
+            user.password === password
+    );
+
+    // User not found
+    if (!user) {
+        setErrors({
+            identifier: "",
+            password: "Invalid email/staff ID or password"
+        });
+
+        return;
+    }
+
+    // Clear errors
     setErrors({
-      email: "",
-      password: ""
-    })
-    setIsLoading(true)
+        identifier: "",
+        password: ""
+    });
+
+    setIsLoading(true);
+
     try {
-      
-      localStorage.setItem("user", JSON.stringify(user));
 
-      const menu = sidebarMenu[user.role]
-      const path = menu[0].path
+        console.log("Logged in user:", user);
+        console.log("Role:", user.role);
 
-      
+        // Save logged-in user
+        localStorage.setItem(
+            "user",
+            JSON.stringify(user)
+        );
 
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      navigate(path)
-      
+        // Get dashboard based on role
+        const role = user.role;
+
+        const dashboardPath = dashboardRoutes[role];
+
+        if (!dashboardPath) {
+            throw new Error("Invalid user role");
+        }
+
+        console.log("Dashboard:", dashboardPath);
+
+        // Navigate to role dashboard
+        navigate(dashboardPath);
+
+    } catch (error) {
+
+        console.error("Login error:", error);
+
+        setErrors({
+            identifier: "",
+            password:
+                error.message ||
+                "Unable to login"
+        });
+
     } finally {
-      setIsLoading(false)
+
+        setIsLoading(false);
+
     }
-      
-    //   try {
-    //   setIsLoading(true);
-
-    //   const response = await fetch("/api/auth/login", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ email, password }),
-    //   });
-
-    //   // Handle the response...
-    // } catch (error) {
-    //   console.error(error);
-    // } finally {
-    //   setIsLoading(false);
-    // }
-  }
+}
 
   return (
     <form onSubmit={handleSubmit} className="form" >
       <Input
         label="Email or Staff ID"
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => {setEmail(e.target.value)
+        type="text"
+        name="identifier"
+        value={identifier}
+        onChange={(e) => {setIdentifier(e.target.value)
           setErrors((prev) => ({
             ...prev,
-            email: ""
+            identifier: ""
           }))
         }}
-        error={errors.email}
+        error={errors.identifier}
         
       />
 

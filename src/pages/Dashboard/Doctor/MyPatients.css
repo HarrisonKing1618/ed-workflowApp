@@ -1,0 +1,298 @@
+.my-patients {
+  width: 100%;
+  padding: 17px 20px;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TABS
+================================ */
+
+.patient-tabs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 13px;
+}
+
+.patient-tab {
+  border: 1px solid #d8e0e8;
+  border-radius: 5px;
+
+  background: #ffffff;
+
+  padding: 6px 11px;
+
+  color: #66758a;
+
+  font-size: .75rem;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+}
+
+.patient-tab:hover {
+  border-color: #b9c9d9;
+  color: #1266a3;
+}
+
+.patient-tab-active {
+  background: #096db4;
+  border-color: #096db4;
+
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+.patients-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #dbe2e9;
+  border-radius: 8px;
+}
+
+.patients-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+
+/* ================================
+   TABLE HEADER
+================================ */
+
+.patients-table th {
+  padding: 8px 12px;
+
+  color: #607087;
+
+  font-size: .7rem;
+  font-weight: 500;
+
+  text-align: left;
+}
+
+
+/* Column widths */
+
+.patients-table th:nth-child(1) {
+  width: 20%;
+}
+
+.patients-table th:nth-child(2) {
+  width: 21%;
+}
+
+.patients-table th:nth-child(3) {
+  width: 11%;
+}
+
+.patients-table th:nth-child(4) {
+  width: 11%;
+}
+
+.patients-table th:nth-child(5) {
+  width: 18%;
+}
+
+.patients-table th:nth-child(6) {
+  width: 9%;
+}
+
+
+/* ================================
+   TABLE BODY
+================================ */
+
+.patients-table tbody tr {
+  border-top: 1px solid #e2e7ec;
+}
+
+.patients-table td {
+  padding: 9px 12px;
+
+  color: #4f5f73;
+
+  font-size: .65rem;
+
+  vertical-align: middle;
+}
+
+
+/* ================================
+   PATIENT NAME
+================================ */
+
+.patient-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.patient-name strong {
+  color: #29384c;
+
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.patient-name span {
+  color: #8190a3;
+
+  font-size: .6rem;
+}
+
+
+/* ================================
+   COMPLAINT
+================================ */
+
+.patient-complaint {
+  display: block;
+
+  max-width: 145px;
+
+  color: #617087;
+
+  line-height: 1.35;
+}
+
+
+/* ================================
+   PRIORITY
+================================ */
+
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 3px 7px;
+
+  border-radius: 20px;
+
+  font-size: .65rem;
+  font-weight: 500;
+}
+
+.priority-critical {
+  background: #ffe4e4;
+  color: #d94343;
+}
+
+.priority-urgent {
+  background: #fff0d9;
+  color: #d88a16;
+}
+
+.priority-routine {
+  background: #e9f4ff;
+  color: #2677ad;
+}
+
+
+/* ================================
+   ASSIGNED
+================================ */
+
+.assigned-time {
+  color: #29384c;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+
+/* ================================
+   STATUS
+================================ */
+
+.patient-status {
+  color: #66758a;
+}
+
+
+/* ================================
+   VIEW BUTTON
+================================ */
+
+.view-patient-btn {
+  border: none;
+
+  background: transparent;
+
+  color: #0875c9;
+
+  font-size: .6rem;
+
+  cursor: pointer;
+
+  padding: 3px 0;
+
+  white-space: nowrap;
+}
+
+.view-patient-btn:hover {
+  color: #04558f;
+}
+
+.view-patient-btn span {
+  margin-left: 2px;
+}
+
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.empty-patients {
+  padding: 30px;
+
+  text-align: center;
+
+  color: #8793a3;
+
+  font-size: .8rem;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+  .my-patients {
+    padding: 14px;
+  }
+
+  .patients-table {
+    min-width: 720px;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-patients {
+    padding: 12px;
+  }
+
+  .patient-tabs {
+    overflow-x: auto;
+    padding-bottom: 3px;
+  }
+
+  .patient-tab {
+    white-space: nowrap;
+  }
+}

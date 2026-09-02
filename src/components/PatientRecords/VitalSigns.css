@@ -1,0 +1,160 @@
+/* =========================================
+   VITAL SIGNS
+========================================= */
+
+.vital-signs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.vital-signs__section {
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.vital-signs__section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 14px;
+
+    border-bottom: 1px solid #e8edf2;
+    background: #fafbfc;
+}
+
+.vital-signs__section-header h3 {
+    margin: 0 0 3px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #27364b;
+}
+
+.vital-signs__section-header p {
+    margin: 0;
+
+    font-size: 9px;
+    color: #98a2b3;
+}
+
+.vital-signs__time {
+    font-size: 9px;
+    color: #667085;
+}
+
+
+/* CURRENT VITAL CARDS */
+
+.vital-signs__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    padding: 12px;
+}
+
+.vital-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 12px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 7px;
+
+    background: #ffffff;
+}
+
+.vital-card__label {
+    font-size: 9px;
+    color: #667085;
+}
+
+.vital-card__value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #27364b;
+}
+
+.vital-card__unit {
+    font-size: 8px;
+    color: #98a2b3;
+}
+
+
+/* VITAL HISTORY */
+
+.vital-history {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.vital-history__header,
+.vital-history__row {
+    min-width: 720px;
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.2fr
+        1fr
+        1fr
+        1fr
+        0.8fr
+        0.7fr;
+
+    padding: 10px 14px;
+
+    font-size: 9px;
+}
+
+.vital-history__header {
+    background: #f8fafc;
+
+    color: #667085;
+    font-weight: 600;
+
+    border-bottom: 1px solid #e8edf2;
+}
+
+.vital-history__row {
+    color: #475467;
+
+    border-bottom: 1px solid #eef1f4;
+}
+
+.vital-history__row:last-child {
+    border-bottom: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .vital-signs__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .vital-signs__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .vital-signs__section-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+}

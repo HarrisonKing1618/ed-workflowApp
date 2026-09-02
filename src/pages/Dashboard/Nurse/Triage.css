@@ -1,0 +1,353 @@
+/* PAGE */
+
+.triage-page {
+    width: 100%;
+    min-height: 100%;
+    background: #ffffff;
+}
+
+
+/* HEADER */
+
+.triage-page-header {
+    padding: 20px 28px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.triage-page-header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #172033;
+}
+
+
+/* CONTENT */
+
+.triage-content {
+    padding: 16px 28px;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.triage-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.triage-stat-card {
+    min-height: 72px;
+    padding: 12px 14px;
+
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.triage-stat-card span {
+    font-size: 10px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.triage-stat-card strong {
+    font-size: 21px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #172033;
+}
+
+.triage-stat-card small {
+    margin-top: 4px;
+    font-size: 9px;
+    color: #1976c5;
+}
+
+.triage-stat-card .critical-text {
+    color: #1976c5;
+}
+
+
+/* =========================
+   WORKSPACE
+========================= */
+
+.triage-workspace {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr;
+    gap: 14px;
+}
+
+
+/* =========================
+   WAITING CARD
+========================= */
+
+.waiting-card {
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.card-title {
+    padding: 11px 14px;
+
+    border-bottom: 1px solid #dfe5ec;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #172033;
+}
+
+
+/* PATIENT BUTTON */
+
+.waiting-patient {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 12px;
+
+    border: none;
+    border-bottom: 1px solid #e5eaf0;
+
+    background: #ffffff;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-family: inherit;
+}
+
+.waiting-patient:last-child {
+    border-bottom: none;
+}
+
+.waiting-patient:hover {
+    background: #f8fafc;
+}
+
+.waiting-patient.selected {
+    background: #f0f7fc;
+}
+
+
+/* PATIENT NAME */
+
+.waiting-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: #172033;
+}
+
+
+/* WAITING META */
+
+.waiting-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 9px;
+    color: #64748b;
+}
+
+
+/* =========================
+   PRIORITY BADGES
+========================= */
+
+.priority-badge {
+    padding: 3px 7px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+    font-weight: 500;
+}
+
+.priority-badge.critical {
+    color: #dc2626;
+    background: #fee2e2;
+}
+
+.priority-badge.stable {
+    color: #16a34a;
+    background: #dcfce7;
+}
+
+.priority-badge.urgent {
+    color: #d97706;
+    background: #fef3c7;
+}
+
+
+/* =========================
+   ASSESSMENT
+========================= */
+
+.assessment-card {
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    padding: 12px;
+}
+
+.assessment-header {
+    margin-bottom: 12px;
+}
+
+.assessment-header h2 {
+    margin: 0;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #172033;
+}
+
+.assessment-header p {
+    margin: 5px 0 0;
+
+    font-size: 9px;
+
+    color: #64748b;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.assessment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 12px;
+}
+
+
+/* SEVERITY */
+
+.severity-section {
+    margin-top: 12px;
+}
+
+.severity-section > label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 10px;
+    color: #475569;
+}
+
+.severity-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.severity-option {
+    padding: 5px 8px;
+
+    border: 1px solid #d9e0e8;
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 8px;
+
+    color: #64748b;
+
+    cursor: pointer;
+}
+
+.severity-option:hover {
+    border-color: #1976c5;
+    color: #1976c5;
+}
+
+.severity-option.active {
+    border-color: #1976c5;
+    background: #edf6fd;
+    color: #1976c5;
+}
+
+.severity-option.resuscitation.active {
+    border-color: #ef4444;
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.triage-submit {
+    margin-top: 12px;
+}
+
+.triage-submit button {
+    width: 100%;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .triage-content {
+        padding: 16px;
+    }
+
+    .triage-workspace {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .triage-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .assessment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .waiting-patient {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .waiting-meta {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+
+}
