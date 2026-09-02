@@ -1,0 +1,65 @@
+.statisticCards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background: #F7F7F7;
+    box-sizing: border-box;
+    padding: 10px;
+    min-height: 100px;
+}
+.statisticCards > p {
+    font-size: .7rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+.statisticCards > h1 {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: #262626;
+    word-break: break-word;
+    line-height: 1.1;
+}
+/* Responsivenes */
+
+/* Tablet */
+@media (max-width:992px) {
+    .statisticCards{
+        
+        min-height: 80px;
+        padding: 0.7rem;
+    }
+    .statisticCards > p {
+        font-size: .65rem;
+    }
+}
+/* Mobile  */
+@media (max-width: 768px) {
+    .statisticCards{
+        min-height: 65px;
+        padding: 0.65rem;
+        border-radius: 6px;
+
+    }
+    .statisticCards > p {
+        font-size: 0.5rem;
+    }
+    .statisticCards > h1 {
+        margin-top: 0.3rem;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .statisticCards{
+        min-height: 70px;
+        padding: 0.5rem;
+        border-radius: 6px;
+    }
+    .statisticCards > p {
+        font-size: 0.4rem;
+    }
+}
+

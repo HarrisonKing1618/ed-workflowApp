@@ -1,0 +1,311 @@
+/* =========================================
+   TREATMENT HISTORY
+========================================= */
+
+.treatment-history {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.treatment-card {
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.treatment-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 12px 14px;
+
+    background: #fafbfc;
+    border-bottom: 1px solid #e8edf2;
+}
+
+.treatment-card__header h3 {
+    margin: 0 0 3px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #27364b;
+}
+
+.treatment-card__header p {
+    margin: 0;
+
+    font-size: 9px;
+    color: #98a2b3;
+}
+
+
+/* =========================================
+   RECORD COUNT
+========================================= */
+
+.treatment-count {
+    padding: 4px 9px;
+
+    border-radius: 12px;
+
+    background: #eef6ff;
+    color: #1670c5;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.treatment-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.treatment-summary__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 13px 14px;
+
+    border-right: 1px solid #eef1f4;
+}
+
+.treatment-summary__item:last-child {
+    border-right: none;
+}
+
+.treatment-summary__item span {
+    font-size: 9px;
+    color: #98a2b3;
+}
+
+.treatment-summary__item strong {
+    font-size: 17px;
+    font-weight: 600;
+    color: #27364b;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.treatment-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.treatment-table__header,
+.treatment-table__row {
+    min-width: 850px;
+
+    display: grid;
+
+    grid-template-columns:
+        0.7fr
+        0.9fr
+        1.3fr
+        1fr
+        1fr
+        1.5fr;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    font-size: 9px;
+}
+
+.treatment-table__header {
+    background: #f8fafc;
+
+    color: #667085;
+    font-weight: 600;
+
+    border-bottom: 1px solid #e8edf2;
+}
+
+.treatment-table__row {
+    color: #475467;
+
+    border-bottom: 1px solid #eef1f4;
+
+    align-items: center;
+}
+
+.treatment-table__row:last-child {
+    border-bottom: none;
+}
+
+.treatment-time {
+    font-weight: 500;
+    color: #344054;
+}
+
+.treatment-name {
+    font-weight: 500;
+    color: #344054;
+}
+
+
+/* =========================================
+   TREATMENT TYPE
+========================================= */
+
+.treatment-type {
+    display: inline-flex;
+
+    padding: 3px 7px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+    font-weight: 500;
+}
+
+.treatment-type--medication {
+    background: #eef6ff;
+    color: #1670c5;
+}
+
+.treatment-type--investigation {
+    background: #f2f4f7;
+    color: #475467;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.treatment-status {
+    display: inline-flex;
+
+    padding: 3px 7px;
+
+    border-radius: 10px;
+
+    font-size: 8px;
+    font-weight: 500;
+
+    background: #f2f4f7;
+    color: #475467;
+}
+
+.treatment-status--success {
+    background: #e8f5ed;
+    color: #287a4b;
+}
+
+.treatment-status--pending {
+    background: #fff4e5;
+    color: #b54708;
+}
+
+.treatment-status--ordered {
+    background: #eef6ff;
+    color: #1670c5;
+}
+
+.treatment-status--cancelled {
+    background: #ffe5e5;
+    color: #d92d20;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.treatment-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 20px;
+
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+
+    text-align: center;
+}
+
+.treatment-empty__icon {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+
+    background: #f2f4f7;
+    color: #667085;
+
+    font-size: 18px;
+}
+
+.treatment-empty h3 {
+    margin: 0 0 5px;
+
+    font-size: 11px;
+    color: #344054;
+}
+
+.treatment-empty p {
+    margin: 0;
+
+    max-width: 350px;
+
+    font-size: 9px;
+    line-height: 1.5;
+
+    color: #98a2b3;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .treatment-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .treatment-summary__item:nth-child(2) {
+        border-right: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .treatment-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .treatment-summary__item {
+        border-right: none;
+    }
+
+    .treatment-card__header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+    }
+}

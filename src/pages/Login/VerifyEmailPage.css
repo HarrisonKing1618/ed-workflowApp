@@ -1,0 +1,41 @@
+.verifyEmail-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.verifyEmail-container h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0F1B2A;
+}
+
+.verifyEmail-container .auth-subtitle {
+    margin-top: .7rem;
+    margin-bottom: 1.5rem;
+    font-size: .7rem;
+    color: #5B6B7E;
+    line-height: 1.4;
+}
+
+.verifyEmail-container > p:last-child {
+    margin-top: 1rem;
+    font-size: .7rem;
+    color: #5B6B7E;
+}
+
+.verifyEmail-container a {
+    color: #0066B3;
+    text-decoration: none;
+}
+.verify-email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.verifyEmail-container a:hover {
+    text-decoration: underline;
+}

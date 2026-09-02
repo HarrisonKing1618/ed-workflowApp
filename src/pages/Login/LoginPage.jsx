@@ -7,18 +7,56 @@ import "./LoginPage.css"
 export default function Login() {
   return (
     <AuthLayout>
-      <main className="login-page">
-        <header>
-          <Logo />
-          <h1>ED.APP</h1>
-          <p>Staff Sign-in</p>
-        </header>
+      <main className="auth-page">
+        <section className="auth-brand">
+          <div className="brand-content">
+            <div className="brand-title">
+
+              <Logo />
+              <h1>ED.APP</h1>
+
+            </div>
+            <p>
+              Digital workflow platform for the Emergency
+              Department. Faster registration, live triage
+              queues, and real-time visibility for nurses,
+              doctors, and administrators.
+            </p>
+
+          </div>
+
+        </section>  
+
+        <section className="auth-form-section">
+          <div className="login-form-container">
+            <h2>Welcome back</h2>
+
+            <p className="auth-subtitle">
+              Sign in with your staff credentials to continue
+            </p>
+
+            <LoginForm />
+
+            <ul className="login-links">
+              <li>
+                <Link to="/forgot-password">
+                  Forgot password
+                </Link>
+              </li>
+
+              <li>
+
+                <Link to="/signup">
+                  New staff member? <span>Create an account</span>
+                </Link>
+
+              </li>
+            </ul>
+                         
+          </div>
+          
+        </section>    
         
-        <LoginForm />
-        <ul>
-          <li><Link to="/forgot-password"> Forgot Password</Link></li>
-          <li><a href="#">Trouble signing in? Contact Admin</a></li>
-        </ul>
     </main>
 
     </AuthLayout>

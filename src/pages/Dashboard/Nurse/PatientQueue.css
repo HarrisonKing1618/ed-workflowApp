@@ -1,0 +1,532 @@
+/* ==============================
+   PAGE
+================================= */
+
+.patient-queue-page {
+    width: 100%;
+    min-height: 100%;
+    background: #ffffff;
+}
+
+
+/* ==============================
+   HEADER
+================================= */
+
+.patient-queue-header {
+    padding: 20px 28px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    background: #ffffff;
+}
+
+.patient-queue-header h1 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #172033;
+}
+
+.patient-queue-header p {
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    color: #64748b;
+}
+
+
+/* ==============================
+   CONTENT
+================================= */
+
+.patient-queue-content {
+    padding: 18px 28px;
+}
+
+
+/* ==============================
+   QUEUE TABS
+================================= */
+
+.queue-tabs {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    margin-bottom: 18px;
+
+    padding: 4px;
+
+    width: fit-content;
+
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+
+    background: #f8fafc;
+}
+
+
+/* DEFAULT TAB */
+
+.queue-tab {
+    height: 34px;
+
+    padding: 0 14px;
+
+    border: 1px solid transparent;
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+}
+
+
+/* HOVER */
+
+.queue-tab:hover {
+    background: #ffffff;
+
+    color: #1976c5;
+}
+
+
+/* ACTIVE */
+
+.queue-tab.active {
+    background: #1976c5;
+
+    border-color: #1976c5;
+
+    color: #ffffff;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   QUEUE CARD
+================================= */
+
+.queue-card {
+    width: 100%;
+
+    border: 1px solid #dfe5ec;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* ==============================
+   CARD HEADER
+================================= */
+
+.queue-card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 16px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.queue-card-header h2 {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #172033;
+}
+
+.queue-card-header span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 10px;
+
+    color: #64748b;
+}
+
+
+/* ==============================
+   TABLE
+================================= */
+
+.queue-table {
+    width: 100%;
+}
+
+
+/* TABLE HEADER */
+
+.queue-table-header {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        2fr
+        1.2fr
+        1.2fr
+        1.2fr
+        0.7fr;
+
+    align-items: center;
+
+    min-height: 40px;
+
+    padding: 0 16px;
+
+    background: #f8fafc;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-sizing: border-box;
+}
+
+.queue-table-header span {
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: #64748b;
+}
+
+
+/* TABLE ROW */
+
+.queue-table-row {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        2fr
+        1.2fr
+        1.2fr
+        1.2fr
+        0.7fr;
+
+    align-items: center;
+    min-height: 60px;
+    padding: 0 16px;
+    border-bottom: 1px solid #edf1f5;
+    box-sizing: border-box;
+    transition: background 0.15s ease;
+}
+
+.queue-table-row:last-child {
+    border-bottom: none;
+}
+
+.queue-table-row:hover {
+    background: #fafcff;
+}
+
+
+/* ==============================
+   PATIENT
+================================= */
+
+.patient-cell {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.patient-cell strong {
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #172033;
+}
+
+.patient-cell small {
+    font-size: 9px;
+
+    color: #94a3b8;
+}
+
+
+/* ==============================
+   COMPLAINT
+================================= */
+
+.complaint-cell {
+    padding-right: 12px;
+
+    font-size: 11px;
+
+    color: #475569;
+}
+
+
+/* ==============================
+   ARRIVAL
+================================= */
+
+.arrival-cell {
+    font-size: 10px;
+
+    color: #64748b;
+
+    text-transform: capitalize;
+}
+
+
+/* ==============================
+   WAITING TIME
+================================= */
+
+.waiting-cell {
+    font-size: 11px;
+
+    font-weight: 500;
+
+    color: #172033;
+}
+
+
+/* ==============================
+   STATUS
+================================= */
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 4px 8px;
+
+    border-radius: 12px;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+/* Waiting for Triage */
+
+.status-badge.waiting-triage {
+    background: #fff4e5;
+
+    color: #c77700;
+}
+
+
+/* Waiting for Doctor */
+
+.status-badge.waiting-doctor {
+    background: #eaf4ff;
+
+    color: #1976c5;
+}
+
+
+/* Assigned */
+
+.status-badge.assigned {
+    background: #f0eaff;
+
+    color: #6842c2;
+}
+
+
+/* In Treatment */
+
+.status-badge.in-treatment {
+    background: #e9f8ef;
+
+    color: #18864b;
+}
+
+
+/* Discharge */
+
+.status-badge.discharge {
+    background: #f1f3f5;
+
+    color: #495057;
+}
+
+
+/* ==============================
+   EMPTY STATE
+================================= */
+
+.empty-queue {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    min-height: 220px;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.empty-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+
+    background: #eaf7ef;
+
+    color: #18864b;
+
+    font-size: 14px;
+}
+
+.empty-queue h3 {
+    margin: 0;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #172033;
+}
+
+.empty-queue p {
+    margin: 5px 0 0;
+
+    font-size: 10px;
+
+    color: #94a3b8;
+}
+/* ==============================
+   VIEW PATIENT BUTTON
+================================= */
+
+.view-patient-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    width: fit-content;
+
+    padding: 6px 9px;
+
+    border: 1px solid #d7e0e9;
+
+    border-radius: 5px;
+
+    background: #ffffff;
+
+    color: #1976c5;
+
+    font-family: inherit;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
+}
+
+.view-patient-button:hover {
+    background: #eaf4ff;
+
+    border-color: #1976c5;
+}
+
+.view-patient-button span {
+    font-size: 12px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .patient-queue-content {
+        padding: 16px;
+    }
+
+    .queue-tabs {
+        width: 100%;
+
+        overflow-x: auto;
+    }
+
+    .queue-tab {
+        flex-shrink: 0;
+    }
+
+    .queue-table {
+        overflow-x: auto;
+    }
+
+    .queue-table-header,
+    .queue-table-row {
+        min-width: 760px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .patient-queue-header {
+        padding: 16px;
+    }
+
+    .patient-queue-header h1 {
+        font-size: 18px;
+    }
+
+    .queue-card {
+        border-radius: 7px;
+    }
+}

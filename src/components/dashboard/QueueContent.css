@@ -1,0 +1,110 @@
+.queue-section {
+    width: 100%;
+}
+
+.queue-title {
+    margin: 0 0 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #172033;
+}
+
+.queue-table {
+    background: #ffffff;
+    border: 1px solid #dfe6ee;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.queue-header,
+.queue-row {
+    display: grid;
+    grid-template-columns:
+        1.2fr
+        1.3fr
+        0.8fr
+        0.6fr
+        1fr
+        0.6fr;
+
+    align-items: center;
+}
+
+.queue-header {
+    min-height: 36px;
+    padding: 0 14px;
+    background: #ffffff;
+    color: #64748b;
+    font-size: 10px;
+}
+
+.queue-row {
+    min-height: 59px;
+    padding: 0 14px;
+    border-top: 1px solid #e5eaf0;
+    font-size: 11px;
+}
+
+.patient-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.patient-info strong {
+    font-size: 11px;
+    color: #172033;
+}
+
+.patient-info small {
+    font-size: 9px;
+    color: #7b8798;
+}
+
+.complaint {
+    color: #64748b;
+    line-height: 1.3;
+    max-width: 140px;
+}
+
+.wait-time {
+    font-weight: 600;
+    color: #172033;
+}
+
+.patient-status {
+    color: #64748b;
+}
+
+.priority {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.priority.critical {
+    background: #fde2e2;
+    color: #d92d20;
+}
+
+.priority.urgent {
+    background: #fff0d6;
+    color: #c77700;
+}
+
+.priority.stable {
+    background: #dff7ee;
+    color: #159570;
+}
+
+.view-button {
+    border: none;
+    background: transparent;
+    color: #006dcc;
+    font-size: 10px;
+    cursor: pointer;
+}

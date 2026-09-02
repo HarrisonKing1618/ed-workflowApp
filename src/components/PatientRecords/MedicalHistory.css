@@ -1,0 +1,127 @@
+/* =========================================
+   MEDICAL HISTORY
+========================================= */
+
+.medical-history {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.medical-history__section {
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.medical-history__section-header {
+    padding: 11px 14px;
+    border-bottom: 1px solid #e8edf2;
+    background: #fafbfc;
+}
+
+.medical-history__section-header h3 {
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #27364b;
+}
+
+.medical-history__items {
+    padding: 12px 14px;
+}
+
+.medical-history__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 10px;
+    color: #667085;
+}
+
+.medical-history__bullet {
+    font-size: 14px;
+    color: #1670c5;
+}
+
+.medical-history__table {
+    width: 100%;
+}
+
+.medical-history__table-header,
+.medical-history__table-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.5fr;
+
+    padding: 10px 14px;
+
+    font-size: 10px;
+}
+
+.medical-history__table-header {
+    background: #f8fafc;
+
+    font-weight: 600;
+    color: #667085;
+
+    border-bottom: 1px solid #e8edf2;
+}
+
+.medical-history__table-row {
+    color: #475467;
+
+    border-bottom: 1px solid #eef1f4;
+}
+
+.medical-history__table-row:last-child {
+    border-bottom: none;
+}
+
+.medical-history__table-row span {
+    display: flex;
+    align-items: center;
+}
+
+.condition-status {
+    display: inline-flex;
+
+    padding: 3px 8px;
+
+    border-radius: 10px;
+
+    background: #e8f5ed;
+    color: #287a4b;
+
+    font-size: 9px;
+}
+
+.medical-history__empty {
+    margin: 0;
+    padding: 14px;
+
+    font-size: 10px;
+    color: #98a2b3;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .medical-history__table-header,
+    .medical-history__table-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .medical-history__table-header span:last-child,
+    .medical-history__table-row span:last-child {
+        grid-column: 1 / -1;
+    }
+}

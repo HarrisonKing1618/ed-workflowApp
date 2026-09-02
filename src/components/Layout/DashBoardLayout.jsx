@@ -16,8 +16,10 @@ export default function DashboardLayout({children}) {
                 isSidebarOpen={isSidebarOpen}
                 setIsSidebarOpen={setIsSidebarOpen}
             />
-           
-            {children}
+            <div className="main-content">
+                {children}
+            </div>
+            
         </main>
     )
 }

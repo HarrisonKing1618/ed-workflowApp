@@ -1,33 +1,138 @@
+.auth-page {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+}
 
-header {
+.auth-brand {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #0B4F8A;
+    color: #FFFFFFD9;
+}
+.brand-content {
+    width: 100%;
+    max-width:420px ;
+}
+.brand-title {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+.brand-title h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.brand-content > p {
+    max-width: 380px;
+    margin-top: .7rem;
+    font-size: .7rem;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.auth-form-section {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+.login-form-container {
+    padding: 10px;
+    width: 100%;
+    max-width: 420px;
+}
+.login-form-container h2 {
+
+    margin: 0 ;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0F1B2A;
+}
+.auth-subtitle{
+    margin-top: .7rem;
+    margin-bottom: 1.5rem;
+    font-size: .7rem;
+    color: #5B6B7E;
+}
+.login-links {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2.5rem;
-    padding: 0.5rem;
-   
-}
-header > h1 {
-    font-size: 1.7rem;
-    margin-top: 1rem;
-}
-header > p {
-    font-size: 0.75rem;
-    margin-top: 1rem;
-}
-ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin: 1rem 0 0;
+    list-style: none;
 
 }
-ul > li {
-    list-style: none;
-    margin: 10px;
+.login-links li {
+    margin: 0;
 }
-ul > li > a {
+.login-links a {
     text-decoration: none;
-    font-size: 0.7rem;
-    color: #808080;
+    font-size: .7rem;
+    color: #0066B3;
 }
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .auth-page {
+        grid-template-columns: 1fr ;
+        grid-template-rows: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .auth-brand {
+        min-height: 35vh;
+        padding: 2rem;
+    }
+
+    .brand-content {
+        max-width: 500px;
+    }
+
+    .auth-form-section {
+        min-height: 65vh;
+        padding: 2rem;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .auth-brand {
+        min-height: 30vh;
+        padding: 1.5rem;
+    }
+
+    .brand-title h1 {
+        font-size: 1.4rem;
+    }
+
+    .brand-content > p {
+        font-size: 0.72rem;
+    }
+
+    .auth-form-section {
+        padding: 1.5rem;
+    }
+
+    .login-form-container h2 {
+        font-size: 1.3rem;
+    }
+}
+

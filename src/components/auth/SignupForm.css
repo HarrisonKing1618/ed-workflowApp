@@ -1,0 +1,24 @@
+.signupForm {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 0.8rem;
+}
+.signupForm .input-group:nth-child(n + 3) {
+    grid-column: 1 / -1;
+}
+.signupForm > button {
+    grid-column: 1 / -1;
+    width: 100%;
+   
+}
+.role-container {
+     grid-column: 1 / -1;
+}
+select{
+    color: #9AA8B8;
+    border: 1px solid #DCE3EA;
+}
+.role-container label {
+    font-size:.7rem;
+    font-weight: 600;
+}

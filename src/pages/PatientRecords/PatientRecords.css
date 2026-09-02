@@ -1,0 +1,203 @@
+.patient-records {
+    padding: 24px;
+    background: #ffffff;
+    min-height: 100%;
+}
+
+.patient-records__title {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.patient-records__title p {
+    margin: 6px 0 0;
+    color: #6b7280;
+}
+
+.clinical-documentation-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.clinical-documentation-btn span {
+    font-size: 18px;
+}
+
+.patient-records__title h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #172033;
+}
+
+/* PATIENT SUMMARY */
+
+.patient-summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border: 1px solid #dfe5ec;
+    border-radius: 9px;
+
+    padding: 14px 16px;
+
+    min-height: 68px;
+}
+
+.patient-summary__avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #e5f0fb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2874b2;
+    font-weight: 600;
+}
+
+.patient-summary__info {
+    flex: 1;
+}
+
+.patient-summary__info h2 {
+    margin: 0 0 4px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #172033;
+}
+
+.patient-summary__info p {
+    margin: 0;
+
+    font-size: 10px;
+    color: #667085;
+}
+
+/* PRIORITY */
+
+.priority-badge {
+    padding: 4px 9px;
+
+    border-radius: 12px;
+
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.priority-badge--critical {
+    background: #ffe5e5;
+    color: #d92d20;
+}
+
+/* TABS */
+
+.record-tabs {
+    display: flex;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    margin-top: 10px;
+
+    overflow-x: auto;
+}
+
+.record-tab {
+    border: none;
+    background: transparent;
+
+    padding: 10px 4px;
+
+    margin-right: 18px;
+
+    font-size: 10px;
+    color: #667085;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.record-tab:hover {
+    color: #1670c5;
+}
+
+.record-tab.active {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.record-tab.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    height: 2px;
+
+    background: #0066cc;
+}
+
+/* CONTENT */
+
+.patient-records__content {
+    margin-top: 14px;
+}
+
+/* DOCTOR NOTES */
+
+.doctor-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.doctor-note {
+    border: 1px solid #dfe5ec;
+    border-radius: 8px;
+
+    padding: 11px 13px;
+}
+
+.doctor-note__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 5px;
+}
+
+.doctor-note__header strong {
+    font-size: 10px;
+    color: #27364b;
+}
+
+.doctor-note__header span {
+    font-size: 9px;
+    color: #667085;
+}
+
+.doctor-note p {
+    margin: 0;
+
+    font-size: 10px;
+    line-height: 1.5;
+
+    color: #667085;
+}

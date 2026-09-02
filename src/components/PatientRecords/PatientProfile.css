@@ -1,0 +1,42 @@
+/* =========================================
+   PATIENT PROFILE
+========================================= */
+
+.patient-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.patient-profile__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+}
+
+.patient-profile__field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 12px 14px;
+
+    border-bottom: 1px solid #eef1f4;
+}
+
+.patient-profile__label {
+    font-size: 9px;
+    color: #98a2b3;
+}
+
+.patient-profile__value {
+    font-size: 10px;
+    font-weight: 500;
+    color: #344054;
+}
+
+@media (max-width: 700px) {
+    .patient-profile__grid {
+        grid-template-columns: 1fr;
+    }
+}
