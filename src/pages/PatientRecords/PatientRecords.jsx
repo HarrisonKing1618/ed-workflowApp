@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom"; 
 import PatientSummary from "../../components/PatientRecords/PatientSummary";
 import RecordTabs from "../../components/PatientRecords/RecordTabs";
-import DoctorNotes from "../../components/patientRecords/DoctorNotes";
+import DoctorNotes from "../../components/PatientRecords/DoctorNotes";
 import MedicalHistory from "../../components/PatientRecords/MedicalHistory";
 import PatientProfile from "../../components/PatientRecords/PatientProfile";
 import VitalSigns from "../../components/PatientRecords/VitalSigns";
