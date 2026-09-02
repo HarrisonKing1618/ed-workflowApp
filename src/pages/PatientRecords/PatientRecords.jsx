@@ -5,9 +5,9 @@ import RecordTabs from "../../components/PatientRecords/RecordTabs";
 import DoctorNotes from "../../components/patientRecords/DoctorNotes";
 import MedicalHistory from "../../components/PatientRecords/MedicalHistory";
 import PatientProfile from "../../components/PatientRecords/PatientProfile";
-import VitalSigns from "../../components/patientRecords/VitalSigns";
-import TriageAssessment from "../../components/patientRecords/TriageAssessment";
-import TreatmentHistory from "../../components/patientRecords/TreatmentHistory";
+import VitalSigns from "../../components/PatientRecords/VitalSigns";
+import TriageAssessment from "../../components/PatientRecords/TriageAssessment";
+import TreatmentHistory from "../../components/PatientRecords/TreatmentHistory";
 import { patients } from "../../data/patients";
 import "./PatientRecords.css";
 
